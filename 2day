@@ -18,7 +18,6 @@
 //문자열 참조변수 str이 "yes"일 때 true인 조건식 >> str.equals("yes") //참조변수 비교는 equals
 
 
-​
 //4-2. 1부터 20까지의 정수중에서 2 또는 3의 배수가 아닌 수의 총합을 구하세요.
 class Exercise4_2 {
     public static void main(String[] args) {
@@ -68,7 +67,7 @@ class Exercise4_4 {
 짝수형에만-가붙고,흡수형에는+가있다.
 num값이짝수일때는-를붙인상태해서더하고그렇지않을경우(else)홀수라면+상태에서sum값에더한다.
 1f문으로sum값의총합이100보다클때까지더해주다가100을넘어가면break로멈춰준다.
-​
+
 
 //4-5. 다음의 for문을 while문으로 변경하세요.
 public class Exercise4_5 {
@@ -136,7 +135,7 @@ class Exercise4_7 {
 
 4-8 
 
-​
+
 //4-8. Math.random()을 이용해서 1부터 6 사이의 임의의 정수를 변수 value에 저장하는 코드를 완성하세요.
 class Exercise4_8{
     public static void main(String[] args){
@@ -153,20 +152,83 @@ class Exercise4_8{
         System.out.println("value:"+value);
     }
 }
-​
+
 4-9 
 해결불가
 
 4-10 
 해결불가
 
+//5-1.다음은 배열을 선언하거나 초기화한 것이다. 잘못된 것을 고르고 그 이유를 설명하세요.
+int[] arr[]; 맞음
+int[] arr = {1,2,3,}; 맞음
+int[] arr = new int[5]; 맞음
+int[] arr = new int[5]{1,2,3,4,5}; 두번째 대괄호에 숫자 넣으면 안됨, 괄호안에 데이터 수에 따라 자동으로 결정되기 때문이다.
+int arr[5]; 배열 선언시 숫자 넣으면 안됨
+int[] arr[] = new int[3][]; 
 
 
+//5-2. 다음과 같은 배열이 있을 때, arr[3].length의 값은?
+int[][]arr ={
+    {5,5,5,5,5},
+    {10,10,10},
+    {20,20,20,20},
+    {30,30}
+};
+
+arr[3].length는 arr[3]이 가리키는 배열의 크기를 의미한다.
+위의 그림에서 arr[3]이 가리키는 배열은 0x500번지에 있는 배열이며 크기는 2이다.
+그래서 arr[3].length의 값은 2가 된다.
+참고로 arr.length의 값은 4이고, arr[0].length의 값은 5, arr[1].length의 값은 3, arr[2].length의 값은 4이다.
+
+//5-3. 배열 arr에 담긴 모든 값을 더하는 프로그램을 완성하세요.
+class Exercise5_3{
+    public static void main(String[] args){
+        int[] arr = {10, 20, 30, 40, 50};
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        System.out.println("sum="+sum);
+    }
+}//예상 결과 : sum=150
 
 
+//5-4. 2차원 배열 arr에 담긴 모든 총합과 평균을 구하는 프로그램을 완성하세요.
+class Exercise5_4 {
+    public static void main(String[] args) {
+        int[][] arr = { 
+            { 5, 5, 5, 5, 5 }, 
+            { 10, 10, 10, 10, 10 },
+            { 20, 20, 20, 20, 20 }, 
+            { 30, 30, 30, 30, 30 } 
+        };
 ​
-​
-        
-        
+	int total = 0;
+	float average = 0;
+	
+	//5-4. 2차원 배열 arr에 담긴 모든 총합과 평균을 구하는 프로그램을 완성하세요.
+class Exercise5_4 {
+    public static void main(String[] args) {
+        int[][] arr = { 
+            { 5, 5, 5, 5, 5 }, 
+            { 10, 10, 10, 10, 10 },
+            { 20, 20, 20, 20, 20 }, 
+            { 30, 30, 30, 30, 30 } 
+        };
+
+	int total = 0;
+	float average = 0;
+		
+	 for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length ; j++) {
+            total += arr[i][j];
+            average = (float) total/ (arr.length * (arr[3].length)); // 평균은 float
+		
+	System.out.println("total=" + total);
+	System.out.println("average=" + average);
+    } // end of main
+} // end of class
+		
+
         
         
