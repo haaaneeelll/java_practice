@@ -119,3 +119,6 @@ class Exercise3_5{
 }
 //예상 결과 : 양수
 
+3-6.
+(int) ((5 / 9f * (fahrenheit - 32)) * 100 + 0.5) / 100f
+
