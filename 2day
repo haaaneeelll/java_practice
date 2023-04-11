@@ -113,9 +113,56 @@ class Exercise4_6 {
     } 
 }
 
-4-7 해결불가
+//4-7. 숫자로 이루어진 문자열 str이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코드를 완성하세요.
+//만일 문자열이 "12345"라면, ‘1+2+3+4+5’의 결과인 15를 출력이 출력되어야 합니다. 
+class Exercise4_7 {
+    public static void main(String[] args) {
+        String str = "12345";
+        int sum = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+              sum += str.charAt(i) - '0';
+             // 숫자 1이 49, 숫자 2가 50, 숫자3이 51, 숫자 4가 52, 숫자 5가 53
+             // 여기여서 '0'인 아스키코드 48을 빼주면
+             //  1 2 3 4 5가 된다.
+        
+        }
+
+        System.out.println("sum=" + sum);
+    }
+}//예상 결과 : sum=15
+
+
 
 4-8 
+
+​
+//4-8. Math.random()을 이용해서 1부터 6 사이의 임의의 정수를 변수 value에 저장하는 코드를 완성하세요.
+class Exercise4_8{
+    public static void main(String[] args){
+        int value = (int)((Math.random() *6) + 1);
+	
+// 0.1   0.2   0.3   0.4   0.5   0.6   0.7   0.8   0.9 에서 *6하면
+
+// .6   1.2   1.8   2.4   3.0   3.6   4.2   4.8   5.4 이거고 여기다 +1 하면
+
+// 1.6   2.2   2.8   3.4   4.0   4.6   5.2   5.8   6.4 이걸 (int)로 반환하니까.
+
+1, 2, 2, 3, 4, 4, 5, 5, 6 이렇게
+	
+        System.out.println("value:"+value);
+    }
+}
+​
+4-9 
+해결불가
+
+4-10 
+해결불가
+
+
+
+
 
 ​
 ​
