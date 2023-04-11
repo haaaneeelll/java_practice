@@ -9,7 +9,7 @@ double d = 1.4e3f;
 
 정답: a, b, c, d
 
-byte b = 256; // 범 초과
+byte b = 256; // 범위 초과
 char c = ''; // 문자 미지정
 char answer = 'no'; // char에 두 개의 문자를 저장할 수 없음. ex) char c
 float f = 3.14 // 접미사f 필요
